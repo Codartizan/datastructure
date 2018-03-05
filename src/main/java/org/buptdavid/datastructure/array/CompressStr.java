@@ -6,14 +6,21 @@ import org.junit.Test;
 
 /**
  * 压缩字符串,如果压缩后的字符串长度大于等于原字符串长度,则返回原字符串
+ * Compress String, If return string is longer than original string, return original string
  * @author weijielu
- *
+ * @modify tshi
  */
 public class CompressStr {
+    /**
+     * Compress String, If return string is longer than original string, return original string
+     * @param s original string
+     * @return compress result (If return string is longer than original string, return original string)
+     */
     private static String compress(String s){
-        StringBuffer sb = new StringBuffer();
+        //StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         
-        int i,j;
+        int i, j;
         for(i = 0; i < s.length(); i++){
             j = i + 1;
             while(j < s.length() && s.charAt(j) == s.charAt(i)){
