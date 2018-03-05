@@ -10,7 +10,7 @@ import org.junit.Test;
  *
  */
 public class CompressStr {
-    public static String compress(String s){
+    private static String compress(String s){
         StringBuffer sb = new StringBuffer();
         
         int i,j;
@@ -27,7 +27,7 @@ public class CompressStr {
         }
         
         String sbString = sb.toString();
-        return sbString.length() <= s.length()? sbString.toString() : s;
+        return sbString.length() <= s.length()? sbString : s;
     }
     
     @Test
